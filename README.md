@@ -1,7 +1,7 @@
 ##itp405 Spring 2015: Assignment 1
 
 Greetings!
-This assignments pulls from a sql database(DB) set up by the professor containingm a dvds and a music DB.
+This assignments pulls from a sql database(DB) set up by the professor containing a dvds and a music DB.
 
 #####To RUN:
 
