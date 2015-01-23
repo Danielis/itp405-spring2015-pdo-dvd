@@ -1,6 +1,6 @@
 <?php 
 
-if (!isset($_GET['searchTerm'])) {
+if (!isset($_GET['genre'])) {
   header('Location: index.php');
 }
 
@@ -9,7 +9,7 @@ $dbname = 'dvd';
 $user = 'student';
 $pass = 'ttrojan';
 
-$searchTerm = $_GET['searchTerm']; // $_REQUEST['searchTerm']
+$genre = $_GET['genre']; // $_REQUEST['genre']
 
 $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
 
@@ -24,15 +24,15 @@ $sql = "
   ON dvds.format_id = formats.id
   INNER JOIN ratings
   ON dvds.rating_id = ratings.id
-  WHERE title LIKE ?
+  WHERE rating_name = ?
   ORDER BY title ASC
 ";
 
 $statement = $pdo->prepare($sql);
-$like = '%'.$searchTerm.'%';
-$statement->bindParam(1, $like);
+$statement->bindParam(1, $genre);
 $statement->execute();
 $dvds = $statement->fetchAll(PDO::FETCH_OBJ);
+// echo "UTF8 causing json_encode(value) not to work for:";
 foreach ($dvds as $key => $dvd){
     $temp = json_encode($dvd);
     if($temp == "" || $temp==NULL){

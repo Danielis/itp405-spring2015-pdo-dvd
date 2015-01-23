@@ -1,5 +1,5 @@
 html{
-	background: url(background.jpg) no-repeat center center fixed; 
+	background: url(../background.jpg) no-repeat center center fixed; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -8,26 +8,47 @@ html{
 form {
 	position: fixed;
 	width: 95%;
-	color: white;
+	color: #d5d7e8;
+	z-index: 2;
 }
 #results{
 	position: absolute;
 	top: 75px;
-	color: white;
-	margin-left: 10%;
-	overflow: hidden;
+	color: #d5d7e8;
+	margin: 0 10% 0 10%;
 }
-.artistBlock{
+.dvdBlock{
 	float: left;
-	width: 30%;
+	width: 28%;
+	height: 210px;
+	padding-right: 1%;
+}
+.dvdBlock .label{
+	font-size: 12px;
+}
+.dvdBlock h3{
+	color: #ffffff;
+}
+.dvdNotFound{
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+	margin: auto auto;
+}
+.searchBackDrop{
+	background-color: black;
+	position: fixed;
+	z-index: 1;
+	width: 110%;
+	margin-left: -5%;
+	margin-top: -10px;
+	height: 35px;
 }
 .search-container {
 	height: 25px;
-	width: 95%;
-    margin-right: auto;
-    /*margin-top: 25px;*/
-    /*margin-bottom: 25px;*/
-    color: white;
+	width: 100%;
+    margin: auto auto;
+    color: #d5d7e8;
 }
 
 .search-container input.huge {
@@ -35,7 +56,9 @@ form {
 	height: 100%;
 	font-size: 50px;
 }
-
+.highlight{
+	color: #22b21a;
+}
 /* unvisited link */
 a:link {
     color: #0f66d8;
