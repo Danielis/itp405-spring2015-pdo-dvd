@@ -45,6 +45,7 @@ Lastly, style your pages a little bit so that they are organized and somewhat pr
 
 #####Submission
 Create a repository on Github or Bitbucket called itp405-spring2015-pdo-dvd all lowercase and push your code up to it. Email dtang@usc.edu the URL to your profile so that I can list it on the class site.
+
 ---
 ###Errors:
 Any without anything in them have no errors, but those included below were not able to be json_encoded for some reason and would return empty.
