@@ -47,10 +47,11 @@ Lastly, style your pages a little bit so that they are organized and somewhat pr
 Create a repository on Github or Bitbucket called itp405-spring2015-pdo-dvd all lowercase and push your code up to it. Email dtang@usc.edu the URL to your profile so that I can list it on the class site.
 
 
-####Errors:
+###Errors:
+Any without anything in them have no errors, but those included below were not able to be json_encoded for some reason and would return empty.
+
 #####Rating: G
-9
-* object(stdClass)#12 (5) { ["title"]=> string(12) "A Bug’s Life" ["label"]=> string(16) "Columbia TriStar" ["genre"]=> string(9) "Animation" ["format"]=> string(22) "Fullscreen, Widescreen" ["rating"]=> string(1) "G" }
+* **9:** object(stdClass)#12 (5) { ["title"]=> string(12) "A Bug’s Life" ["label"]=> string(16) "Columbia TriStar" ["genre"]=> string(9) "Animation" ["format"]=> string(22) "Fullscreen, Widescreen" ["rating"]=> string(1) "G" }
 
 #####Rating: NC-17
 
@@ -59,7 +60,18 @@ Create a repository on Github or Bitbucket called itp405-spring2015-pdo-dvd all 
 #####Rating: PG
 
 #####Rating: PG-13
+* **75:** object(stdClass)#78 (5) { ["title"]=> string(33) "Cookie’s Fortune: Special Edition" ["label"]=> string(25) "U.S.A. Home Entertainment" ["genre"]=> string(6) "Comedy" ["format"]=> string(22) "Fullscreen, Widescreen" ["rating"]=> string(5) "PG-13" }
 
 #####Rating: R
+* **303:** object(stdClass)#306 (5) { ["title"]=> string(13) "Bustin’ Loose" ["label"]=> string(9) "Goodtimes" ["genre"]=> string(6) "Comedy" ["format"]=> string(4) "test" ["rating"]=> string(1) "R" }
+* **1812:** object(stdClass)#1815 (5) { ["title"]=> string(11) "Ulee’s Gold" ["label"]=> string(3) "MGM" ["genre"]=> string(5) "Drama" ["format"]=> string(10) "Widescreen" ["rating"]=> string(1) "R" }
+ 
 #####Rating: test
+* **56:** object(stdClass)#59 (5) { ["title"]=> string(69) "Chaplin: Special Edition: The Kid/The Rink/The Emmigrant/A Dog’s Life" ["label"]=> string(19) "Delta Entertainment" ["genre"]=> string(6) "Action" ["format"]=> string(4) "test" ["rating"]=> string(4) "test" } 
+* **159:** object(stdClass)#162 (5) { ["title"]=> string(12) "Hitman’s Run" ["label"]=> string(9) "Avalanche" ["genre"]=> string(16) "Action Adventure" ["format"]=> string(4) "test" ["rating"]=> string(4) "test" } 
+* **165:** object(stdClass)#168 (5) { ["title"]=> string(13) "Hunter’s Moon" ["label"]=> string(7) "Monarch" ["genre"]=> string(6) "Action" ["format"]=> string(4) "test" ["rating"]=> string(4) "test" } 
+* **215:** object(stdClass)#218 (5) { ["title"]=> string(24) "Linnea in Monet’s Garden" ["label"]=> string(18) "First Run Features" ["genre"]=> string(6) "Action" ["format"]=> string(4) "test" ["rating"]=> string(4) "test" } 
+* **256:** object(stdClass)#259 (5) { ["title"]=> string(30) "NOVA: Everest – The Death Zone" ["label"]=> string(17) "WGBH Boston Video" ["genre"]=> string(6) "Action" ["format"]=> string(4) "test" ["rating"]=> string(4) "test" }
+
 #####Rating: UR
+
