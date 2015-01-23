@@ -45,10 +45,18 @@ Lastly, style your pages a little bit so that they are organized and somewhat pr
 
 #####Submission
 Create a repository on Github or Bitbucket called itp405-spring2015-pdo-dvd all lowercase and push your code up to it. Email dtang@usc.edu the URL to your profile so that I can list it on the class site.
-
-
+---
 ###Errors:
 Any without anything in them have no errors, but those included below were not able to be json_encoded for some reason and would return empty.
+####How To Test:
+1. Download the repository and make your way to the directory in terminal
+2. Set up your local server with php -S localhost:3000
+3. Go into ratings.php and comment out line48 while removing the comment on lines 39 and 40.
+4. Head to http://localhost:3000/rating.php?genre=G
+  * You should notice that 9 plus some code appears.
+5. Head to ratings.php again and this time comment out line 40 and comment in line 41.
+  * Notice how this time only the key is shown but the line after is not produced.
+6. Repeat for each Rating below and you should have similar results.
 
 #####Rating: G
 * **9:** object(stdClass)#12 (5) { ["title"]=> string(12) "A Bug’s Life" ["label"]=> string(16) "Columbia TriStar" ["genre"]=> string(9) "Animation" ["format"]=> string(22) "Fullscreen, Widescreen" ["rating"]=> string(1) "G" }
