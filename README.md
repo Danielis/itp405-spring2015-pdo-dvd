@@ -48,7 +48,7 @@ Create a repository on Github or Bitbucket called itp405-spring2015-pdo-dvd all 
 
 ---
 ###Errors:
-Any without anything in them have no errors, but those included below were not able to be json_encoded for some reason and would return empty.
+The error below occurs with rating.pgp which is where I first found the error. I've added a test for rating.php below and added 2 extra steps after to see the same error in search.php. Below are also results for certain inputs.
 ####How To Test:
 1. Download the repository and make your way to the directory in terminal
 2. Set up your local server with php -S localhost:3000
@@ -57,16 +57,20 @@ Any without anything in them have no errors, but those included below were not a
   * You should notice that 9 plus some code appears.
 5. Head to ratings.php again and this time comment out line 40 and comment in line 41.
   * Notice how this time only the key is shown but the line after is not produced.
-6. Repeat for each Rating below and you should have similar results.
+6. Repeat steps 4-5 for each rating below by changing line 4 and you should have similar results.
+
+**After** testing out rating.php you can find the same error in search.php.
+
+1. Head to http://localhost:3000/search.php?searchTerm=19
+  * You should see no lines because they all work
+2. Now change it to http://localhost:3000/search.php?searchTerm=al
+  * Now you should see the lines same as the ones at the bottom of this list.
+5. However if you comment out line 40 and comment in line 41 you will see no json_encoded information
+  * The result is empty because json_encode doesn't work on those lines.
+6. **I didn't try out many more tests here because it all stems from the same issue. Do you know how to fix this? Perhaps making SQL return only UTF8 encoded info, perhaps we could just loop and utf8_encode the lines before or maybe it's an error on my part.**
 
 #####Rating: G
 * **9:** object(stdClass)#12 (5) { ["title"]=> string(12) "A Bug’s Life" ["label"]=> string(16) "Columbia TriStar" ["genre"]=> string(9) "Animation" ["format"]=> string(22) "Fullscreen, Widescreen" ["rating"]=> string(1) "G" }
-
-#####Rating: NC-17
-
-#####Rating: NR
-
-#####Rating: PG
 
 #####Rating: PG-13
 * **75:** object(stdClass)#78 (5) { ["title"]=> string(33) "Cookie’s Fortune: Special Edition" ["label"]=> string(25) "U.S.A. Home Entertainment" ["genre"]=> string(6) "Comedy" ["format"]=> string(22) "Fullscreen, Widescreen" ["rating"]=> string(5) "PG-13" }
@@ -82,5 +86,10 @@ Any without anything in them have no errors, but those included below were not a
 * **215:** object(stdClass)#218 (5) { ["title"]=> string(24) "Linnea in Monet’s Garden" ["label"]=> string(18) "First Run Features" ["genre"]=> string(6) "Action" ["format"]=> string(4) "test" ["rating"]=> string(4) "test" } 
 * **256:** object(stdClass)#259 (5) { ["title"]=> string(30) "NOVA: Everest – The Death Zone" ["label"]=> string(17) "WGBH Boston Video" ["genre"]=> string(6) "Action" ["format"]=> string(4) "test" ["rating"]=> string(4) "test" }
 
-#####Rating: UR
-
+####Search: al
+* **82** object(stdClass)#85 (5) { ["title"]=> string(33) "Altius – On Air Extreme Sports #1" ["label"]=> string(7) "Pioneer" ["genre"]=> string(16) "Special Interest" ["format"]=> string(4) "test" ["rating"]=> string(2) "NR" } 
+* **83** object(stdClass)#86 (5) { ["title"]=> string(33) "Altius – On Air Extreme Sports #2" ["label"]=> string(7) "Pioneer" ["genre"]=> string(16) "Special Interest" ["format"]=> string(4) "test" ["rating"]=> string(2) "NR" } 
+* **84** object(stdClass)#87 (5) { ["title"]=> string(33) "Altius – On Air Extreme Sports #3" ["label"]=> string(7) "Pioneer" ["genre"]=> string(16) "Special Interest" ["format"]=> string(4) "test" ["rating"]=> string(2) "NR" } 
+* **259** object(stdClass)#262 (5) { ["title"]=> string(69) "Chaplin: Special Edition: The Kid/The Rink/The Emmigrant/A Dog’s Life" ["label"]=> string(19) "Delta Entertainment" ["genre"]=> string(6) "Action" ["format"]=> string(4) "test" ["rating"]=> string(4) "test" } 
+* **314** object(stdClass)#317 (5) { ["title"]=> string(33) "Cookie’s Fortune: Special Edition" ["label"]=> string(25) "U.S.A. Home Entertainment" ["genre"]=> string(6) "Comedy" ["format"]=> string(22) "Fullscreen, Widescreen" ["rating"]=> string(5) "PG-13" } 
+* **1222** object(stdClass)#1225 (5) { ["title"]=> string(32) "Spiritual Earth: Astronaut’s Eye" ["label"]=> string(7) "Pioneer" ["genre"]=> string(11) "Documentary" ["format"]=> string(10) "Fullscreen" ["rating"]=> string(2) "NR" }
